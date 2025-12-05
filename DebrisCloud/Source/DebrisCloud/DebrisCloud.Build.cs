@@ -10,6 +10,8 @@
  * http://www.wtfpl.net/ for more details.
  */
 
+using System;
+using System.IO;
 using UnrealBuildTool;
 
 public class DebrisCloud : ModuleRules
@@ -31,5 +33,12 @@ public class DebrisCloud : ModuleRules
 		// PrivateDependencyModuleNames.Add("OnlineSubsystem");
 
 		// To include OnlineSubsystemSteam, add it to the plugins section in your uproject file with the Enabled attribute set to true
+
+
+		string projectRoot = Path.Combine(ModuleDirectory  , "..", "..");
+		string cspiceLibPath = Path.Combine(projectRoot,  "Plugins" , "MaxQ" , "Source" , "ThirdParty" , "CSpice_Library");
+
+		PublicIncludePaths.Add(Path.Combine(cspiceLibPath, "cspice" , "include" ));
+
 	}
 }

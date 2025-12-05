@@ -19,15 +19,15 @@ public class DebrisCloudEditorTarget : TargetRules
 	public DebrisCloudEditorTarget( TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
+                DefaultBuildSettings = BuildSettingsVersion.V6;
 		ExtraModuleNames.AddRange( new string[] { "DebrisCloud" } );
 
         ExtraModuleNames.AddRange(new string[] { "Spice", "SpiceEditor", "SpiceUncooked" });
 
-        bUseFastPDBLinking = false;
-        bPublicSymbolsByDefault = true;  // <- Forced to true on Windows anyways
-        WindowsPlatform.bStripUnreferencedSymbols = false;
+       // bUseFastPDBLinking = false;
+      //  bPublicSymbolsByDefault = true;  // <- Forced to true on Windows anyways
+      //  WindowsPlatform.bStripUnreferencedSymbols = false;
 
-        DebrisCloudTarget.BuildCSpiceLib(this);
+      //  DebrisCloudTarget.BuildCSpiceLib(this);
     }
 }

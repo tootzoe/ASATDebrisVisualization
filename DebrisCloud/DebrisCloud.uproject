@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.0",
+	"EngineAssociation": "{EE90F1C1-4FD7-5BAC-EB91-4AAD237F54BE}",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -14,7 +14,7 @@
 		}
 	],
 	"Plugins": [
-{
+		{
 			"Name": "MaxQ",
 			"Enabled": true
 		},

@@ -117,7 +117,7 @@ void ADebrisActor::LoginWithSpaceTrack(const FString& NewObjectId, const FString
         }
         else {
             switch (pRequest->GetStatus()) {
-            case EHttpRequestStatus::Failed_ConnectionError:
+            case EHttpRequestStatus::Failed :
                 UE_LOG(LogTemp, Error, TEXT("Connection failed."));
             default:
                 UE_LOG(LogTemp, Error, TEXT("Request failed."));
